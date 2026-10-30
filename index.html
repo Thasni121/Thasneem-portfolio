@@ -65,7 +65,30 @@
       <div class="hero-bottom"><span>BASED IN INDIA <b>↗</b> WORKING ACROSS DISCIPLINES</span><a href="#about" aria-label="Scroll down to About section">SCROLL TO EXPLORE <span class="down-arrow">↓</span></a></div>
     </section>
 
-    <div class="ticker" aria-label="Areas of focus"><div class="ticker-track" aria-hidden="true"><span>OFF-PAGE SEO <i>✳</i> SEARCH VISIBILITY <i>✳</i> ANSWER ENGINE OPTIMIZATION <i>✳</i> GENERATIVE ENGINE OPTIMIZATION <i>✳</i> AI ENGINEERING <i>✳</i> OFF-PAGE SEO <i>✳</i> SEARCH VISIBILITY <i>✳</i> ANSWER ENGINE OPTIMIZATION <i>✳</i> GENERATIVE ENGINE OPTIMIZATION <i>✳</i> AI ENGINEERING <i>✳</i></span></div></div>
+
+<div class="ticker" aria-label="Areas of focus">
+  <div class="ticker-track" aria-hidden="true">
+
+    <!-- First ticker group -->
+    <div class="ticker-group">
+      <span>OFF-PAGE SEO</span><i>✳</i>
+      <span>SEARCH VISIBILITY</span><i>✳</i>
+      <span>ANSWER ENGINE OPTIMIZATION</span><i>✳</i>
+      <span>GENERATIVE ENGINE OPTIMIZATION</span><i>✳</i>
+      <span>AI ENGINEERING</span><i>✳</i>
+    </div>
+
+    <!-- Duplicate group for seamless looping -->
+    <div class="ticker-group">
+      <span>OFF-PAGE SEO</span><i>✳</i>
+      <span>SEARCH VISIBILITY</span><i>✳</i>
+      <span>ANSWER ENGINE OPTIMIZATION</span><i>✳</i>
+      <span>GENERATIVE ENGINE OPTIMIZATION</span><i>✳</i>
+      <span>AI ENGINEERING</span><i>✳</i>
+    </div>
+
+  </div>
+</div>
 
     <section class="section about" id="about">
       <div class="section-topline"><span><span class="section-dot">●</span> 01 / THE PERSON</span><span>MORE THAN A JOB TITLE ↗</span></div>
@@ -169,17 +192,186 @@
     </section>
 
     <section class="section credentials dark-section" id="credentials">
-      <div class="section-topline light"><span><span class="section-dot">●</span> 07 / CREDENTIALS</span><span>DOCUMENTED LEARNING</span></div>
-      <div class="credentials-heading reveal"><h2>THE RECEIPTS<span class="heading-period">.</span></h2><p>Certificate and experience-letter previews below come from your portfolio document. Two additional Drive documents are linked separately because their titles could not be confirmed from the supplied files.</p></div>
-      <div class="credential-grid credential-grid-evidence">
-        <a class="credential-item credential-with-image reveal" href="assets/certificates/inmakes-internship-certificate.webp" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/inmakes-internship-certificate.webp" alt="INMAKES INFOTECH internship certificate" loading="lazy"><div class="cred-body"><span>INTERNSHIP CERTIFICATE</span><h3>INMAKES INFOTECH</h3><p>Python Full Stack Developer internship certificate shown in the portfolio document.</p></div><span class="cred-arrow">↗</span></a>
-        <a class="credential-item credential-with-image reveal" href="assets/certificates/m-squared-experience-letter.webp" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/m-squared-experience-letter.webp" alt="M Squared Software and Services experience letter" loading="lazy"><div class="cred-body"><span>EXPERIENCE DOCUMENT</span><h3>M Squared Software & Services</h3><p>Experience letter included in the supplied portfolio documentation.</p></div><span class="cred-arrow">↗</span></a>
-        <a class="credential-item credential-with-image reveal" href="assets/certificates/building-web-applications-php.webp" target="_blank" rel="noopener noreferrer"><img src="assets/certificates/building-web-applications-php.webp" alt="University of Michigan Building Web Applications in PHP certificate" loading="lazy"><div class="cred-body"><span>COURSE CERTIFICATE</span><h3>Building Web Applications in PHP</h3><p>University of Michigan · Coursera certificate.</p></div><span class="cred-arrow">↗</span></a>
-        <article class="credential-item reveal"><div class="cred-art">☁<span>04</span></div><div class="cred-body"><span>COURSE CERTIFICATE</span><h3>NPTEL Cloud Computing</h3><p>MHRD, Government of India. Certificate named in the resume; a certificate image was not included in the supplied document.</p></div></article>
-      </div>
-      <div class="supporting-docs reveal"><div><span class="section-kicker">ADDITIONAL SHARED DOCUMENTS</span><p>Open the two Drive files supplied earlier. Their exact document titles have not been verified from the available source material.</p></div><div class="supporting-doc-links"><a href="https://drive.google.com/file/d/17AXrRDlewJBHls555DAX39avZMretm8i/view?usp=drive_link" target="_blank" rel="noopener noreferrer">SHARED DOCUMENT 01 ↗</a><a href="https://drive.google.com/file/d/1qw6q7yTXuSfHMyBU5Fjf-apCU__kf2l4/view?usp=drive_link" target="_blank" rel="noopener noreferrer">SHARED DOCUMENT 02 ↗</a></div></div>
-    </section>
 
+<section class="section credentials dark-section" id="credentials">
+
+  <!-- Section labels -->
+  <div class="section-topline light">
+    <span>
+      <span class="section-dot">●</span>
+      07 / CREDENTIALS
+    </span>
+    <span>DOCUMENTED LEARNING</span>
+  </div>
+
+  <!-- Main heading and description -->
+  <div class="credentials-heading reveal">
+    <h2>THE RECEIPTS<span class="heading-period">.</span></h2>
+
+    <p>
+      Certificate and experience-letter previews below come from
+      your portfolio document. Two additional Drive documents are
+      linked separately because their titles could not be confirmed
+      from the supplied files.
+    </p>
+  </div>
+
+  <!-- Horizontal credentials carousel -->
+  <div class="credential-carousel"
+       data-credential-carousel
+       aria-label="Credentials carousel">
+
+    <button
+      class="credential-carousel-arrow credential-carousel-prev"
+      type="button"
+      aria-label="Show previous credentials"
+      aria-controls="credential-carousel-viewport"
+      disabled>
+      <span aria-hidden="true">←</span>
+    </button>
+
+    <div
+      class="credential-carousel-viewport"
+      id="credential-carousel-viewport"
+      tabindex="0"
+      aria-label="Credential cards. Use the arrow buttons or horizontal scrolling to browse.">
+
+      <div class="credential-carousel-track">
+
+        <!-- 01: INMAKES internship certificate -->
+        <a
+          class="credential-item credential-with-image reveal"
+          href="assets/certificates/inmakes-internship-certificate.webp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            src="assets/certificates/inmakes-internship-certificate.webp"
+            alt="INMAKES INFOTECH internship certificate"
+            loading="lazy">
+
+          <div class="cred-body">
+            <span>INTERNSHIP CERTIFICATE</span>
+            <h3>INMAKES INFOTECH</h3>
+            <p>
+              Python Full Stack Developer internship certificate
+              shown in the portfolio document.
+            </p>
+          </div>
+
+          <span class="cred-arrow">↗</span>
+        </a>
+
+        <!-- 02: M Squared experience document -->
+        <a
+          class="credential-item credential-with-image reveal"
+          href="assets/certificates/m-squared-experience-letter.webp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            src="assets/certificates/m-squared-experience-letter.webp"
+            alt="M Squared Software and Services experience letter"
+            loading="lazy">
+
+          <div class="cred-body">
+            <span>EXPERIENCE DOCUMENT</span>
+            <h3>M Squared Software &amp; Services</h3>
+            <p>
+              Experience letter included in the supplied portfolio
+              documentation.
+            </p>
+          </div>
+
+          <span class="cred-arrow">↗</span>
+        </a>
+
+        <!-- 03: PHP course certificate -->
+        <a
+          class="credential-item credential-with-image reveal"
+          href="assets/certificates/building-web-applications-php.webp"
+          target="_blank"
+          rel="noopener noreferrer">
+
+          <img
+            src="assets/certificates/building-web-applications-php.webp"
+            alt="University of Michigan Building Web Applications in PHP certificate"
+            loading="lazy">
+
+          <div class="cred-body">
+            <span>COURSE CERTIFICATE</span>
+            <h3>Building Web Applications in PHP</h3>
+            <p>University of Michigan · Coursera certificate.</p>
+          </div>
+
+          <span class="cred-arrow">↗</span>
+        </a>
+
+        <!-- 04: NPTEL Cloud Computing -->
+        <article class="credential-item reveal">
+
+          <div class="cred-art">
+            ☁
+            <span>04</span>
+          </div>
+
+          <div class="cred-body">
+            <span>COURSE CERTIFICATE</span>
+            <h3>NPTEL Cloud Computing</h3>
+            <p>
+              MHRD, Government of India. Certificate named in the
+              resume; a certificate image was not included in the
+              supplied document.
+            </p>
+          </div>
+
+        </article>
+
+      </div>
+    </div>
+
+    <button
+      class="credential-carousel-arrow credential-carousel-next"
+      type="button"
+      aria-label="Show next credentials"
+      aria-controls="credential-carousel-viewport">
+
+      <span aria-hidden="true">→</span>
+    </button>
+
+  </div>
+
+  <!-- Additional document links -->
+  <div class="supporting-docs reveal">
+
+    <div>
+      <span class="section-kicker">ADDITIONAL SHARED DOCUMENTS</span>
+      <p>
+        Open the two Drive files supplied earlier. Their exact
+        document titles have not been verified from the available
+        source material.
+      </p>
+    </div>
+
+    <div class="supporting-doc-links">
+      <a
+        href="https://drive.google.com/file/d/17AXrRDlewJBHls555DAX39avZMretm8i/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer">
+        SHARED DOCUMENT 01 ↗
+      </a>
+
+      <a
+        href="https://drive.google.com/file/d/1qw6q7yTXuSfHMyBU5Fjf-apCU__kf2l4/view?usp=drive_link"
+        target="_blank"
+        rel="noopener noreferrer">
+        SHARED DOCUMENT 02 ↗
+      </a>
+    </div>
+
+  </div>
+
+</section>
     <section class="contact" id="contact"><div class="contact-top"><span><span class="section-dot">●</span> 08 / GET IN TOUCH</span><span>THIS COULD BE THE START OF SOMETHING</span></div><div class="contact-body"><div class="contact-left reveal"><div class="contact-orbit">✳</div><h2>LET'S MAKE<br><em>something</em><br>MATTER<span>.</span></h2></div><div class="contact-right reveal"><p>If you’re working on something in search, digital marketing, software development, or intelligent technology, I’d love to hear from you.</p><a class="contact-link magnetic" href="mailto:thasneemsamad0@gmail.com"><span>EMAIL ME</span><span>↗</span></a><div class="contact-social"><a href="https://www.linkedin.com/in/thasneem-a-11b042297" target="_blank" rel="noopener noreferrer">LINKEDIN ↗</a><a href="https://github.com/Thasni121" target="_blank" rel="noopener noreferrer">GITHUB ↗</a><a href="https://thasneem-samad.lovable.app" target="_blank" rel="noopener noreferrer">WEBSITE ↗</a><a href="tel:+917025316919">+91 70253 16919 ↗</a><a href="assets/thasneem-resume.pdf" target="_blank" rel="noopener noreferrer">DOWNLOAD RESUME ↗</a></div><p class="no-cv-note">Kollam, Kerala, India · thasneemsamad0@gmail.com</p></div></div><footer class="footer"><a href="#top" class="footer-monogram">T<span>.</span>A</a><span>© <span id="copyright-year">2026</span> THASNEEM A. / DESIGNED WITH INTENTION.</span><a href="#top" class="back-top">BACK TO TOP ↑</a></footer></section>
   </main>
 </body>

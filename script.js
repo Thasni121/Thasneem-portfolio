@@ -83,5 +83,113 @@
       frame=requestAnimationFrame(draw);
       document.addEventListener('visibilitychange',()=>{if(document.hidden)cancelAnimationFrame(frame);else frame=requestAnimationFrame(draw)});
     }
+  }// ==========================================
+// CREDENTIALS CAROUSEL
+// Scroll one credential card per arrow click.
+// ==========================================
+
+const credentialCarousel = document.querySelector(
+  '[data-credential-carousel]'
+);
+
+if (credentialCarousel) {
+  const viewport = credentialCarousel.querySelector(
+    '.credential-carousel-viewport'
+  );
+
+  const track = credentialCarousel.querySelector(
+    '.credential-carousel-track'
+  );
+
+  const previousButton = credentialCarousel.querySelector(
+    '.credential-carousel-prev'
+  );
+
+  const nextButton = credentialCarousel.querySelector(
+    '.credential-carousel-next'
+  );
+
+  if (viewport && track && previousButton && nextButton) {
+
+    // Calculate the width of one card plus the space after it.
+    const getStep = () => {
+      const firstCard = track.querySelector('.credential-item');
+
+      if (!firstCard) {
+        return viewport.clientWidth;
+      }
+
+      const trackStyle = getComputedStyle(track);
+      const gap =
+        parseFloat(trackStyle.columnGap || trackStyle.gap) || 0;
+
+      return firstCard.getBoundingClientRect().width + gap;
+    };
+
+    // Disable arrows when the carousel reaches either end.
+    const updateButtons = () => {
+      const maxScroll = Math.max(
+        0,
+        viewport.scrollWidth - viewport.clientWidth
+      );
+
+      previousButton.disabled = viewport.scrollLeft <= 2;
+      nextButton.disabled =
+        viewport.scrollLeft >= maxScroll - 2;
+    };
+
+    // Move backward by one card.
+    previousButton.addEventListener('click', () => {
+      viewport.scrollBy({
+        left: -getStep(),
+        behavior: reduce ? 'auto' : 'smooth'
+      });
+    });
+
+    // Move forward by one card.
+    nextButton.addEventListener('click', () => {
+      viewport.scrollBy({
+        left: getStep(),
+        behavior: reduce ? 'auto' : 'smooth'
+      });
+    });
+
+    // Keep the arrow states updated while scrolling.
+    viewport.addEventListener(
+      'scroll',
+      updateButtons,
+      { passive: true }
+    );
+
+    // Recalculate the controls if the screen size changes.
+    window.addEventListener(
+      'resize',
+      updateButtons,
+      { passive: true }
+    );
+
+    // Also support left/right keyboard navigation.
+    viewport.addEventListener('keydown', event => {
+      if (event.key === 'ArrowLeft') {
+        event.preventDefault();
+
+        viewport.scrollBy({
+          left: -getStep(),
+          behavior: reduce ? 'auto' : 'smooth'
+        });
+      } else if (event.key === 'ArrowRight') {
+        event.preventDefault();
+
+        viewport.scrollBy({
+          left: getStep(),
+          behavior: reduce ? 'auto' : 'smooth'
+        });
+      }
+    });
+
+    // Set the initial state of the arrow buttons.
+    updateButtons();
   }
+}
+
 })();
